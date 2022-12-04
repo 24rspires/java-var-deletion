@@ -1,0 +1,26 @@
+{
+	"name": "java-var-deletion",
+	"version": "0.0.1",
+	"displayName": "Java Var Deletion",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"activationEvents": [
+		"onLanguage:java"
+	],
+	"main": "./extension.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/24rspires/java-var-deletion.git"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "java",
+				"extensions": [
+					".java"
+				]
+			}
+		]
+	}
+}
