@@ -1,8 +1,8 @@
-// VSCode Extension: Java Var Deletion
-
 const vscode = require("vscode");
 
 function activate(context) {
+	// Replace the DocumentFormattingEditProvider class with the
+	// registerDocumentFormattingEditProvider function
 	let disposable = vscode.languages.registerDocumentFormattingEditProvider(
 		"java",
 		{
@@ -32,14 +32,10 @@ function activate(context) {
 
 	context.subscriptions.push(disposable);
 
-	// Listen for the onDidSaveTextDocument event
-	vscode.workspace.onDidSaveTextDocument((document) => {
-		// Check if the document being saved is a Java file
+	// Apply the formatting edits to the document
+	vscode.workspace.applyEdit((document) => {
 		if (document.languageId === "java") {
-			// Apply the formatting edits to delete instances of "var"
-			vscode.languages.getDocumentFormattingEdits(document).then((edits) => {
-				vscode.workspace.applyEdit(edits);
-			});
+			return vscode.languages.getDocumentFormattingEdits(document);
 		}
 	});
 }

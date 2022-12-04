@@ -5,6 +5,5 @@ public class test {
         System.out.println(a);
 
         a = 20;
-        
     }
 }
