@@ -8,7 +8,7 @@
 	"activationEvents": [
 		"onLanguage:java"
 	],
-	"main": "./extension.js",
+	"main": "src/extension.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/24rspires/java-var-deletion.git"
@@ -22,5 +22,8 @@
 				]
 			}
 		]
+	},
+	"devDependencies": {
+		"vscode": "^1.1.37"
 	}
 }
