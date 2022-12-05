@@ -1,7 +1,9 @@
 {
 	"name": "java-var-deletion",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"displayName": "Java Var Deletion",
+	"icon": "images/icon.png",
+	"publisher": "OZoneRobotics",
 	"engines": {
 		"vscode": "^1.0.0"
 	},
